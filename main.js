@@ -18,7 +18,7 @@ function modelLoaded() {
 
 function start()
 {
-  objectDetector = ml5.objectDetector('cocossd', modelLoaded);
+  objectDetector = ml5.objectDetector(' ', modelLoaded);
   document.getElementById("status").innerHTML = "Status : Detecting Objects";
   object_name = document.getElementById("object_name").value;
 }
@@ -35,7 +35,7 @@ function draw() {
   image(video, 0, 0, 380, 380);
       if(status != "")
       {
-        objectDetector.detect(video, gotResult);
+         
         for (i = 0; i < objects.length; i++) {
           document.getElementById("status").innerHTML = "Status : Object Detected";
           
